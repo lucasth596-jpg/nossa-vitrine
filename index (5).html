@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    </div>
+</body>
+</html>
+</body>
+    <html></html>
+
+    <div class="hero">
+        <h1>Bem-vindo ao Meu Site</h1>
+    </div>
+
+    <div class="container">
+        <h2>Sobre o Meu Trabalho</h2>
+        <p>Sou um desenvolvedor web focado em criar sites modernos e responsivos. Explore o site e conheça mais!</p>
+        <div class="sobre">
+            <div class="sobre-texto">
+                <h3>Objetivo</h3>
+                <p>Oferecer soluções digitais inovadoras que impulsionam negócios e conectam pessoas.</p>
+            </div>
+            <div class="sobre-texto">
+                <h3>Visão</h3>
+                <p>Ser referência em desenvolvimento web, sempre priorizando a qualidade e a experiência do usuário.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Meu Site. Todos os direitos reservados.
+    </footer>
+</body><div class="chatbot">
+    <div class="chatbot-titulo">
+        🤖 Assistente
+    </div>
+
+    <div class="chatbot-mensagem">
+        Olá! 👋 Como posso ajudar?
+    </div>
+
+    <button onclick="responder()">
+        Quero saber mais
+    </button>
+</div>
+
+<script>
+function responder() {
+    alert("Olá! Seja bem-vindo ao meu site. Como posso ajudar você?");
+}
+
+if (pergunta.includes("oi") || pergunta.includes("olá")) {
+    resposta = "Olá! 👋 Seja bem-vindo ao meu site! Como posso ajudar?";
+}
+else if (pergunta.includes("produto")) {
+    resposta = "Você pode encontrar nossos produtos na vitrine. 🛍️";
+}
+else if (pergunta.includes("preço") || pergunta.includes("preco")) {
+    resposta = "Os preços estão disponíveis na vitrine de produtos.";
+}
+else if (pergunta.includes("comprar")) {
+    resposta = "Escolha um produto na vitrine e clique no botão de compra.";
+}
+else if (pergunta.includes("whatsapp") || pergunta.includes("zap")) {
+    resposta = "Você pode falar conosco pelo WhatsApp através do botão de contato.";
+}
+else if (pergunta.includes("contato")) {
+    resposta = "Acesse a página Contato para falar conosco.";
+}
+else {
+    resposta = "Desculpe, ainda não entendi. Pode reformular sua pergunta?";
+}
+</script>
+
+</html>
+
+<!-- CHATBOT -->
+
+<div class="chatbot">
+
+    <div class="chatbot-cabecalho">
+        🤖 Assistente
+    </div>
+
+    <div id="chatbot-mensagens" class="chatbot-mensagens">
+
+        <p>
+            🤖 Olá! 👋
+        </p>
+
+        <p>
+            Como posso ajudar você?
+        </p>
+
+    </div>
+
+    <div class="chatbot-area">
+
+        <input
+            type="text"
+            id="chatbot-input"
+            placeholder="Digite sua pergunta..."
+        >
+
+        <button onclick="responderChat()">
+            Enviar
+        </button>
+
+    </div>
+
+</div>
+
+
+<script>
+
+function responderChat() {
+
+    const input = document.getElementById("chatbot-input");
+
+    const mensagens =
+        document.getElementById("chatbot-mensagens");
+
+    const pergunta =
+        input.value.toLowerCase().trim();
+
+    if (pergunta === "") {
+        return;
+    }
+
+
+    /* MOSTRA A PERGUNTA */
+
+    mensagens.innerHTML +=
+        "<p><strong>Você:</strong> " +
+        input.value +
+        "</p>";
+
+
+    /* RESPOSTAS DO ROBÔ */
+
+    let resposta;
+
+
+    if (
+        pergunta.includes("oi") ||
+        pergunta.includes("olá") ||
+        pergunta.includes("ola")
+    ) {
+
+        resposta =
+            "Olá! 👋 Seja bem-vindo ao meu site! Como posso ajudar?";
+
+    }
+
+    else if (
+        pergunta.includes("produto") ||
+        pergunta.includes("produtos") ||
+        pergunta.includes("vitrine")
+    ) {
+
+        resposta =
+            "🛍️ Você pode encontrar nossos produtos na vitrine do site.";
+
+    }
+
+    else if (
+        pergunta.includes("preço") ||
+        pergunta.includes("preco") ||
+        pergunta.includes("valor")
+    ) {
+
+        resposta =
+            "💰 Os preços estão disponíveis na vitrine de produtos.";
+
+    }
+
+    else if (
+        pergunta.includes("comprar") ||
+        pergunta.includes("compra")
+    ) {
+
+        resposta =
+            "🛒 Escolha um produto na vitrine e clique no botão de compra.";
+
+    }
+
+    else if (
+        pergunta.includes("whatsapp") ||
+        pergunta.includes("zap")
+    ) {
+
+        resposta =
+            "📱 Você pode falar conosco pelo WhatsApp através do botão de contato.";
+
+    }
+
+    else if (
+        pergunta.includes("contato") ||
+        pergunta.includes("falar")
+    ) {
+
+        resposta =
+            "📩 Acesse a página Contato para falar conosco.";
+
+    }
+
+    else if (
+        pergunta.includes("obrigado") ||
+        pergunta.includes("obrigada")
+    ) {
+
+        resposta =
+            "😊 Por nada! Estou aqui para ajudar.";
+
+    }
+
+    else {
+
+        resposta =
+            "🤖 Ainda não entendi. Tente perguntar sobre produtos, preços, compras ou contato.";
+
+    }
+
+
+    /* MOSTRA A RESPOSTA */
+
+    mensagens.innerHTML +=
+        "<p><strong>🤖 Assistente:</strong> " +
+        resposta +
+        "</p>";
+
+
+    /* LIMPA O CAMPO */
+
+    input.value = "";
+
+}
+
+</script>
+</main>
+<!-- VITRINE DE PRODUTOS -->
+
+<section class="vitrine">
+
+    <div class="vitrine-titulo">
+
+        <span>PRODUTOS</span>
+
+        <h2>Conheça nossa vitrine</h2>
+
+        <p>
+            Confira alguns dos produtos disponíveis.
+        </p>
+
+    
+    </div>
+
+<section class="hero">
+    <h1>Bem-vindo à nossa loja</h1>
+    <p>Encontre os melhores produtos para o seu dia a dia.</p>
+</section>

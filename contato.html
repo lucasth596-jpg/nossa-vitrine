@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contato | Lucas Emanuel</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+
+    <header class="cabecalho">
+
+        <div class="logo">
+            Lucas Emanuel
+        </div>
+
+        <nav class="menu">
+
+            <a href="index.html">Início</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="contato.html">Contato</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ÁREA PRINCIPAL -->
+
+    <main>
+
+        <section class="contato">
+
+            <div class="contato-texto">
+
+                <span>FALE COMIGO</span>
+
+                <h1>Entre em contato</h1>
+
+                <p>
+                    Tem alguma dúvida, sugestão ou gostaria de conversar
+                    sobre um projeto? Envie uma mensagem.
+                </p>
+
+            </div>
+
+
+            <div class="contato-caixa">
+
+                <form>
+
+                    <label for="nome">
+                        Nome
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Seu nome"
+                        required
+                    >
+
+
+                    <label for="email">
+                        E-mail
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="seuemail@email.com"
+                        required
+                    >
+
+<label for="assunto">
+    Assunto
+</label>
+
+<select id="assunto" name="assunto" required>
+
+    <option value="" disabled selected>
+        Selecione um assunto
+    </option>
+
+    <option value="duvida">
+        Dúvida
+    </option>
+
+    <option value="orcamento">
+        Orçamento
+    </option>
+
+    <option value="parceria">
+        Parceria
+    </option>
+
+    <option value="produto">
+        Informações sobre produto
+    </option>
+
+    <option value="outro">
+        Outro assunto
+    </option>
+
+</select>
+                
+
+                    
+                    <textarea
+                        id="mensagem"
+                        name="mensagem"
+                        placeholder="Escreva sua mensagem..."
+                        rows="6"
+                        required
+                    ></textarea>
+
+
+                    <<button type="submit" class="botao-enviar">
+    Enviar mensagem
+</button>
+                    </button>
+
+                <form id="formContato"></form>
+
+            </div>
+
+        </section>
+
+    </main>
+<a href="https://wa.me/5531973644425" target="_blank" class="botao-whatsapp">
+    💬 Falar comigo no WhatsApp
+</a>
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        <p>
+            © 2026 Lucas Emanuel. Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+</body><script>
+    <script>
+document.getElementById("formContato").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const nome = document.getElementById("nome").value;
+    const email = document.getElementById("email").value;
+    const assunto = document.getElementById("assunto").value;
+    const mensagem = document.getElementById("mensagem").value;
+
+    const texto = 
+        "Olá! Meu nome é " + nome +
+        "\n\nE-mail: " + email +
+        "\nAssunto: " + assunto +
+        "\n\nMensagem: " + mensagem;
+
+    const numero = "553173644425";
+
+    const url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(texto);
+
+    window.open(url, "_blank");
+
+});
+</script>
+</script>
+
+</html>
