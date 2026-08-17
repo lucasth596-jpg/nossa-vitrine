@@ -642,3 +642,80 @@ img {
         font-size: 17px;
     }
 }
+.banner-principal {
+    position: relative;
+    width: 95%;
+    max-width: 1200px;
+    height: 400px;
+    margin: 30px auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.banner-principal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.banner-principal::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.30);
+}
+
+.banner-conteudo {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+    color: white;
+}
+
+.banner-conteudo h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.banner-conteudo p {
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+.botao-banner {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.botao-banner:hover {
+    background: #1d4ed8;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 700px) {
+
+    .banner-principal {
+        width: 95%;
+        height: 300px;
+    }
+
+    .banner-conteudo h1 {
+        font-size: 28px;
+    }
+
+    .banner-conteudo p {
+        font-size: 16px;
+    }
+}
