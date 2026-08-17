@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pagamento | Nossa Vitrine</title>
+
+    <link rel="stylesheet" href="pagamento.css">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <h1>🛍️ Nossa Vitrine</h1>
+        <p>Finalização do pedido</p>
+    </header>
+
+    <main class="container">
+
+        <section class="pagamento">
+
+            <h2>💳 Escolha a forma de pagamento</h2>
+
+            <div class="opcoes">
+
+                <!-- PIX -->
+                <label class="opcao">
+                    <input type="radio" name="pagamento" value="pix">
+                    <div>
+                        <strong>💠 PIX</strong>
+                        <span>Pagamento instantâneo</span>
+                    </div>
+                </label>
+
+                <!-- CARTÃO DE CRÉDITO -->
+                <label class="opcao">
+                    <input type="radio" name="pagamento" value="credito">
+                    <div>
+                        <strong>💳 Cartão de crédito</strong>
+                        <span>Visa, Mastercard, Elo e outros</span>
+                    </div>
+                </label>
+
+                <!-- CARTÃO DE DÉBITO -->
+                <label class="opcao">
+                    <input type="radio" name="pagamento" value="debito">
+                    <div>
+                        <strong>💳 Cartão de débito</strong>
+                        <span>Pagamento com cartão de débito</span>
+                    </div>
+                </label>
+
+                <!-- BOLETO -->
+                <label class="opcao">
+                    <input type="radio" name="pagamento" value="boleto">
+                    <div>
+                        <strong>🧾 Boleto bancário</strong>
+                        <span>Pagamento através de boleto</span>
+                    </div>
+                </label>
+
+            </div>
+
+            <!-- ÁREA DINÂMICA -->
+
+            <div id="dadosPagamento" class="dadosPagamento">
+
+                <p>Selecione uma forma de pagamento para continuar.</p>
+
+            </div>
+
+            <button class="botao" onclick="continuarPagamento()">
+                Continuar pagamento
+            </button>
+
+            <p id="mensagem" class="mensagem"></p>
+
+        </section>
+
+        <!-- RESUMO DO PEDIDO -->
+
+        <aside class="resumo">
+
+            <h2>🛒 Resumo do pedido</h2>
+
+            <div class="produto">
+                <span>Produto</span>
+                <strong>R$ 59,90</strong>
+            </div>
+
+            <div class="linha"></div>
+
+            <div class="total">
+                <span>Total</span>
+                <strong>R$ 59,90</strong>
+            </div>
+
+        </aside>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Nossa Vitrine</p>
+        <p>Pagamento seguro</p>
+    </footer>
+
+    <script src="pagamento.js"></script>
+
+</body>
+
+</html>
